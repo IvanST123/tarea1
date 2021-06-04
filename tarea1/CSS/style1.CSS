@@ -1,0 +1,17 @@
+
+    h2{ color: blue;
+    }
+    p{
+        color: rgb(107, 83, 161);
+        background-color:rgb(241, 6, 171);
+        padding: 15px;
+        border: 10px solid rgb(0, 255, 76);
+        /* margin: 50px;*/
+        /*margin-top: 40px;
+        margin-right: 10px;
+        margin-bottom: 20;
+        margin-left: 10px;*/
+        margin: 40px 10px 60px 10px;
+        text-align: center;
+     }
+     
