@@ -1,0 +1,27 @@
+table{
+    width: 100%;
+}
+caption{
+    color: sandybrown;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 45px;
+    line-height: 70px;
+}
+table, th, td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 5px;
+}
+td{
+    text-align: center;
+}
+th{
+    background-color: cornflowerblue;
+    color: cornsilk;
+}
+tr:nth-child(even){
+    background-color: darkmagenta;
+}
+tr:nth-child(odd){
+    background-color: darkorange;
+}
