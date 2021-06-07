@@ -1,0 +1,45 @@
+html{
+    height: 100%;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(#ff0000, #0044ff)
+
+}
+.contenedor{
+    margin: 50px auto;
+    width: 400px;
+    padding: 30px;
+    background: rgba(0, 0, 0, .5);
+    border-radius: 10px;
+}
+.contenedor h2{
+    margin: 0 0 30px;
+    padding: 0;
+    font-size: 30px;
+    color: aqua;
+    text-align: center;
+}
+.contenedor .elemento label{
+    color: rgb(255, 255, 255);
+
+}
+.contenedor .elemento input{
+   width: 100%;
+   padding: 10px 0;
+   color: #fff;
+   background: transparent;
+   border: none;
+   border-bottom: 1px solid rgb(255, 255, 255);
+   margin-bottom: 30px;
+    
+}
+/* aqui es para poner un color en el boton de enviar y ala hora de pasar el cursor este cambie de color */
+.contenedor .elemento .boton input{
+    background-color: aqua ;
+    border: none;
+}
+.contenedor .elemento .boton input:hover{
+    background-color: rgb(255, 153, 0) ;
+}

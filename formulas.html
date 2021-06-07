@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>formularios</title>
+</head>
+<body>
+    <a href="index.html">Volver ala pagina 0</a>
+    <h1>formularios</h1>
+    <form>
+        <!-- <form method="POST"> para que no se vean los datos-->
+
+        <label for="nombre">nombre: </label><br>
+        <input type="text" id="nombre" placeholder="escribe tu nombre"><br>
+        <label for="apellido">apellido: </label><br>
+        <input type="text" id="apellido" placeholder="escribe tu apellido"><br>
+
+        
+
+        <label for="nombre">nombre: </label><br>
+        <input type="text" id="nombre" value="ivan"><br>
+
+        <label for="nombre">nombre: </label><br>
+        <input type="text" id="nombre" name="nombre" placeholder="escribe tu nombre" required="true"><br>
+        
+        <label for="apellido">apellido: </label><br>
+        <input type="text" id="apellido" name="apeliido" placeholder="escribe tu apellido"><br>
+
+        <label for="password">password: </label><br>
+        <input type="password" id="password" name="password"><br>
+
+        
+
+        <label for="edad">edad: </label><br>
+        <input type="number" id="edad" name="edad" step="any"><br>
+         
+        <label>genero</label><br>
+<input type="radio" id="femenino" name="genero" value="f">
+<label for="femenino">femenino</label>
+<input type="radio" id="masculino" name="genero" value="m">
+<label for="masculino">masculino</label><br>
+
+<label>hobbies</label><br>
+<input type="checkbox" id="leer" name="hobbies" value="lectura">
+<label>leer</label><br>
+
+<input type="checkbox" id="deportes" name="hobbies" value="deporte">
+<label>deportes</label><br>
+
+<input type="checkbox" id="musica" name="hobbies" value="musica">
+<label>musica</label><br>
+
+<input type="checkbox" id="caminar" name="hobbies" value="caminata">
+<label>caminata</label><br>
+
+
+
+
+
+<br>
+        <input type="submit" value="enviar"><br>
+    </form>
+</body>
+</html>
