@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript</title>
+    <style>
+        .azul{
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="encabezado" class="azul">ejemplo javascript</h1>
+    <p id="parrafo1" class="azul">ITESCO</p>
+    <p id="parrafo2" class="azul">ing . informatica</p>
+    <p id="parrafo3" class="azul">desarrollo web</p>
+    <p id="parrafo4" class="azul">7 de junio</p>
+
+    <script>
+        
+        console.log("bienvenidos a javascript ")
+        const encabezadoh1 = document.getElementById("encabezado")
+        const {innerHTML} = encabezadoh1
+        const parrafo1 = document.getElementById("parrafo1")
+        console.log("valor del encabezado: " + encabezadoh1.innerHTML + " y el parrafo es " + parrafo1.innerHTML)
+        console.log(`valor del encabezado: ${encabezadoh1.innerHTML} y el parrafo es ${parrafo1.innerHTML}`) /*mas profesional*/
+        console.log(`valor del encabezado: ${innerHTML}`)
+        parrafo1.innerHTML += " unidad III "
+        console.log(`el valor del nuevo parrafo es: ${parrafo1.innerHTML}`)
+        const parrafos = document.getElementsByTagName("p")
+        console.log(`numero de parrafos: ${parrafos.length}`);
+        for (let i=0; i< parrafos.length; i++) {
+            console.log(`i: ${i} - ${parrafos[i].innerHTML}`)
+            
+        }
+const elementos= document.getElementsByClassName("azul")
+console.log(`numero de elementos: ${elementos.length}`);
+        for (let i=0; i< elementos.length; i++) {
+            console.log(`i: ${i} - ${elementos[i].innerHTML}`)
+            
+        }
+const elementosP = document.querySelectorAll("p.azul")
+console.log("*************************************************")
+for(item of elementosP){
+    console.log(`${item.innerHTML}`)
+}
+
+    </script>
+</body>
+</html>
