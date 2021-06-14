@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eventos</title>
+    <style>
+        
+
+    html{
+    height: 100%;
+}
+     body{
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(#ffd904, #4cc0b6)
+} 
+ul{
+    list-style-type: none;
+    background-color: rgb(0, 217, 255);
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+} 
+li a{
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+    
+}
+li a:hover{
+    background-color: tomato;
+}
+    </style>
+</head>
+<body> 
+    <ul>
+        <li><a href="index.html">index</a></li>
+        
+    </ul>
+    <br>
+
+     <!-- forma1 
+     <h1 onclick="this.innerHTML=this.innerHTML+'eventos'">manejo de </h1>
+    <br>  -->
+    <!-- forma 2
+    <h1 onclick="changeText(this)">haz click en mi </h1>
+    <br>
+    <script>
+        function changeText(tituloH1){
+            console.log(tituloH1)
+            console.log(tituloH1.innerHTML)
+            tituloH1.innerHTML = tituloH1.innerHTML + "!!GRACIAS!!"
+            console.log(tituloH1.innerHTML)
+            
+        }
+    </script> -->
+<!-- forma 3
+    <h1 id="tituloH1">haz click en mi </h1>
+    <br>
+<script>
+    document.getElementById("tituloH1").onclick = changeText
+    function changeText (){
+        document.getElementById("tituloH1").innerHTML=document.getElementById("tituloH1").innerHTML+ "!!GRACIAS!!"
+    }
+</script> -->
+
+    <!-- forma 4
+<h1 id="tituloH1">haz click en mi  </h1>
+    <br>
+    <div id="show"></div>
+    <script>
+        document.getElementById("tituloH1").onclick = changeText
+        function changeText (){
+            document.getElementById("tituloH1").innerHTML=document.getElementById("tituloH1").innerHTML+ "!!gracias!!"
+            document.getElementById("show").innerHTML="usando onclick"
+}
+            </script> -->
+            <!-- forma 5
+<body onload="alerta()">
+    <h1 id="tituloH1">haz click en mi</h1>
+    <br>
+    <div id="show"></div>
+    <script>
+        function alerta(){
+            alert("bienvenido")
+            let text =""
+            if (navigator.cookieEnabled){
+                text = "galletas habilitadas"
+         } else {
+             text = "galletas inhabilitadas"
+         }
+         document.getElementById("show").innerHTML=text
+        }
+    </script> -->
+    <!-- forma 6
+    <h1 id="tituloH1">haz click en mi</h1>
+    <br>
+    Nombre:<input type="text" onchange="toUpper(this) ">
+    <script>
+        function toUpper(inputName){
+            inputName.value = inputName.value.toUpperCase()
+            
+        }
+    </script> -->
+    <!-- forma 7
+    <h1 id="tituloH1" onmousedown="toRed(this)" onmouseup="toBlue(this)"
+    onclick="toGreen(this) ">
+    manejo de eventos
+    </h1>
+    <br>
+    <script>
+        function toRed(elementH1){
+            elementH1.style.color = "red"
+            console.log("onmouseDown")
+        }
+        function toBlue(elementH1){
+            elementH1.style.color = "blue"
+            console.log("onmouseUp")
+        }
+        function toGreen(elementH1){
+            elementH1.style.color = "Green"
+            console.log("onmouseClick")
+        }
+
+
+    </script> -->
+    <!-- forma 8
+    <h1 id="tituloH1">manejo de eventos </h1>
+    <br>
+    Nombre: <input type="text" onfocus="change(this)" onblur="restore(this)">
+    <br><br>
+    Apellido: <input type="text" onfocus="change(this)"onblur="restore(this)">
+
+    <script>
+        function change(elementInput) {
+            elementInput.style.background = "orange"
+            
+        }
+        function restore(elementInput) {
+            elementInput.style.background = "white"
+            
+        }
+    </script>
+     -->
+     <h1 id="tituloH1">ejemplo de manejo de eventos </h1>
+<br>
+<form id="formulario">
+    NOMBRE:   <input type="text" id="name">
+    <br><br>
+    APELLIDO: <input type="text" id="lastName">
+</form>
+<script>
+
+const form1 = document.getElementById("formulario")
+form1.addEventListener("focus",(evento)=>{
+    evento.target.style.background="orange"
+},true)
+form1.addEventListener("blur",(evento)=>{
+    evento.target.style.background="white"
+},true)
+
+    // document.getElementById("name").addEventListener("focus", change)
+    // document.getElementById("name").addEventListener("blur", restore)
+    // document.getElementById("lastName").addEventListener("focus", change)
+    // document.getElementById("lastName").addEventListener("blur", restore)
+    // function change(event) {
+    //     const element = event.target
+    //     element.style.background = "orange"
+    // }
+    // function restore(event){
+    //     const element = event.target
+    //     element.style.background = "white"
+    // }
+
+</script>
+
+    
+</body>
+</body>
+</html>
