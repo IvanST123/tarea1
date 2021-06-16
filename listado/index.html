@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>listado</title>
+    <link rel="stylesheet" href="CCS/stylo4listado.CSS">
+    <style>
+        
+        ul{
+    list-style-type: none;
+    background-color: rgba(0, 217, 255, 0.849);
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    text-align: center;
+    
+
+} 
+li a{
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+    
+}
+li a:hover{
+    background-color: tomato;
+}
+    
+        </style>
+</head>
+<body onload="mostrarestudiantes()">
+    <ul> 
+        
+        <li><a href="../index.html">index</a></li>
+        
+    </ul>
+    <br>
+    <div class="contenedor" id="encabezado">
+        <h1>LISTA DE RENEGADOS</h1>
+    </div>
+    <div class="contenedor">
+        <div class="elemento">
+            <ul id="alumnos">
+                <!-- <li>Ivan Sanchez Torres</li>
+                <li>rene renegado max</li> -->
+
+
+            </ul>
+
+        </div>
+
+    </div>
+    <div class="contenedor">
+        <div style="text-align: center">
+            <button style="cursor: pointer;" onclick="agregarEstudiante()">+</button>
+        </div>
+        <form id="formulario">
+            <input type="text" id="nombre" placeholder="Nombre"> 
+            <input type="text" id="apellido" placeholder="Apellido"> 
+
+        </form>
+    </div>
+    
+<script src="js/estudiante.js"></script>
+<script src="js/app.js"></script>
+
+</body>
+</html>
