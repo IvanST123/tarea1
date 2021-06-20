@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Control Ingresos vs Egresos</title>
+    <link rel="stylesheet" href="css/estilos.css">
+
+    <style>
+        
+        ul{
+    list-style-type: none;
+    background-color: #28b9b5;
+    margin: 0;
+    padding: 0;
+    overflow: auto;
+    text-align: center;
+    
+
+} 
+li a{
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    text-decoration: none;
+    
+}
+li a:hover{
+    background-color: #ff5049;
+}
+    
+        </style>
+</head>
+<body onload="cargarApp()">
+    <ul> 
+        
+        <li><a href="../index.html">Pagina Principal</a></li>
+        
+    </ul>
+    <div class="cabecero">
+        <div class="presupuesto">
+            <div class="presupuesto_titulo">
+                DONACION DISPONIBLE
+            </div>
+            <div class="presupuesto_valor" id="presupuesto">+ 2,000</div>
+            <div class="presupuesto_ingreso limpiarEstilos">
+                    <div class="presupuesto_ingreso--texto">DONACION TOTAL</div>
+                    <div class="derecha">
+                        <div class="presupuesto_ingreso--valor" id="ingresos">+3,000</div>
+                        <div class="presupuesto_ingreso--porcentaje">&nbsp;</div>
+                    </div>
+            </div>
+            <div class="presupuesto_egreso limpiarEstilos">
+                <div class="presupuesto_egreso--texto">GASTOS TOTAL</div>
+                <div class="derecha">
+                    <div class="presupuesto_egreso--valor" id="egresos">-1,000</div>
+                    <div class="presupuesto_egreso--porcentaje" id="porcentaje">40%</div>
+                </div>
+            </div>
+        </div>       
+    </div>
+    <form id ="forma" onsubmit="return false">
+        <div class="agregar">
+            <div class="agregar_contenedor">
+                <select class="agregar_tipo"  id="tipo">
+                    <option value="ingreso" selected>+</option>
+                    <option value="egreso">-</option>
+                </select>
+                <input type="text" class="agregar_descripcion"
+                     placeholder="Agregar Descripción" id="descripcion"/>
+                <input type="number" class="agregar_valor" id="valor" 
+                    placeholder="Valor" step='any'/>
+                    <button class="agregar_btn" onclick="agregarDato()">
+                        <ion-icon name="checkmark-circle-outline"></ion-icon>
+                    </button>
+            </div>
+        </div>   
+    </form>
+    <div class="contenedor limpiarEstilos">
+        <div class="ingreso">
+                <h2 class="ingreso_titulo">DONANTE .......................................CANTIDAD</h2>
+                <div id="lista-ingresos">
+                    <div class="elemento limpiarEstilos">
+                    <div class="elemento_descripcion">Salario</div>
+                    <div class="derecha limpiarEstilos">
+                        <div class="elemento_valor">+ 5,000.00</div>
+                        <div class="elemento_eliminar">
+                            <button class="elemento_eliminar--btn">
+                                <ion-icon name="close-circle-outline"></ion-icon>
+                            </button>
+                        </div>
+                    </div>                
+                </div>
+               <!-- desde aqui se agregan los igresos                 -->
+            </div>
+        </div>
+    </div>
+        <div class="contenedor limpiarEstilos">        
+        <div class="egreso">
+                <h2 class="egreso_titulo">GASTOS.............................................CANTIDAD</h2>
+                                
+                <div id="lista-egresos">
+                               
+                <!-- desde a qui se agregan los egresos                -->
+            </div>
+        </div>
+    </div>
+    <script src="js/Dato.js"></script>
+    <script src="js/Ingreso.js"></script>
+    <script src="js/Egreso.js"></script>
+    <script src="js/app.js"></script>
+    <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>    
+</body>
+</html>
