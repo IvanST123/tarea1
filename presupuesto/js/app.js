@@ -1,11 +1,11 @@
 const ingresos = [
-    new Ingreso('Bolsa alimento para cotorro', 120.00),
-    new Ingreso('Galletas para perro',170.00),
-    new Ingreso('Venta de cachorro Hysky',3500.00)       
+    new Ingreso('juan', 120.00),
+    new Ingreso('lux',170.00),
+    new Ingreso('jhin',3500.00)       
 ]
 const egresos =[
-    new Egreso('Pago de servicio de luz', 890.00),
-    new Egreso('Renta local', 1500.00)
+    new Egreso('renta', 890.00),
+    new Egreso('medicamentos', 1500.00)
 ]
 let cargarApp = ()=>{
     cargarCabecero()
